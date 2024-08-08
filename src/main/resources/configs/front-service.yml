@@ -13,6 +13,11 @@ spring:
     redis:
       host: ${redis.host}
       port: ${redis.port}
+  datasource:
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@${db.host}:${db.port}:XE
+    username: ${db.username}
+    password: ${db.password}
   jpa:
     properties:
       hibernate:
